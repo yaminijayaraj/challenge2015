@@ -63,15 +63,15 @@ def print_result(data)
     d1_role = get_data(data["p1arent3"][0]["parent2"][0]["url"]).select{|x| x["url"] == deg2_name.first}.first
     d3_role = get_data(data["p2arent3"][0]["parent2"][0]["url"]).select{|x| x["url"] == deg2.first}.first
     puts "Degree of separation: #{$count}"
-
+    puts
     puts "Movie: #{data["p1arent3"][0]["parent2"][0]["name"]}"
     puts "#{data["p1arent3"][0]["parent2"][0]["role"]} : #{convert_to_name(data["p1arent3"][0]["parent2"][0]["parent1"])}"
     puts "#{d1_role["role"]} :  #{convert_to_name(deg2_name.first)}"
-
+    puts
     puts "Movie: #{data["name"]}"
     puts "#{d2_data[0]["role"]} : #{convert_to_name(deg2_name.first)}"
     puts "#{deg_2_role} : #{convert_to_name(deg2.first)}"
-
+    puts
     puts "Movie: #{data["p2arent3"][0]["parent2"][0]["name"]}"
     puts "#{d3_role["role"]} : #{convert_to_name(deg2.first)}"
     puts "#{data["p2arent3"][0]["parent2"][0]["role"]}: #{convert_to_name(data["p2arent3"][0]["parent2"][0]["parent1"])}"
