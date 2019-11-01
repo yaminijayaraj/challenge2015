@@ -115,6 +115,5 @@ elsif data1.strip == data2.strip
   puts "You have entered the same string!!!"
 else
   output = recursive_degrees(data1, data2)
-  puts "test"
 end
 
